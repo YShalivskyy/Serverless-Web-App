@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <script src="angular.min.js"></script>
+    <script src="mycontroller.js"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css"/>
+</head>
+<body>
+<div class="layout" ng-app='webApp' ng-controller="myCtrl">
+	<div class="layout__box">
+        <form class="form" ng-submit="postForm()">
+			<h2 class="form__title">Registration</h2>
+			<div class="form__row">
+				<div class="input">
+					<input id="firstName-input" class="input__text" type="text" required="" ng-model="iFirstName" />
+					<label class="input__label" for="name-input">First name*</label>
+				</div>
+			</div>
+            
+            <div class="form__row">
+				<div class="input">
+					<input id="lastName-input" class="input__text" type="text" required="" ng-model="iLastName" />
+					<label class="input__label" for="name-input">Last name*</label>
+				</div>
+			</div>
+			
+			<div class="form__row">
+				<div class="input">
+					<input id="email-input" class="input__text" type="email" required="" ng-model="iEmail">
+					<label class="input__label" for="email-input">E-mail*</label>
+				</div>
+			</div>
+			
+<!--
+			<div class="form__row">
+				<div class="input">
+					<input id="password-input" class="input__text" type="password" required="" ng-model="iPassword">
+					<label class="input__label" for="password-input">Password</label>
+				</div>
+			</div>
+-->
+
+			<div class="form__row">
+				<div class="input">
+					<input id="phone-input" class="input__text" type="tel" ng-model="iPhone">
+					<label class="input__label" for="phone-input">Phone</label>
+				</div>
+			</div>
+			
+			<div class="form__row">
+				<div class="input">
+					<label class="input__label" for="agreement-input">
+						<input id="agreement-input" class="input__check" type="checkbox" required="">
+						<span class="input__fk-check"></span>
+						<span class="input__caption">User agreement</span>
+					</label>
+				</div>
+			</div>
+			
+			<div class="form__row form__row_actions">
+				<div class="input">
+					<button class="input__button" type="submit">Register</button>
+				</div>
+			</div>
+		<form>
+	</div>
+</div>
+<script type = "text/javascript" src = "pageScripts.js"></script>
+</body>
+</html>
